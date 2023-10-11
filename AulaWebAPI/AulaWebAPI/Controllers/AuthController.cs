@@ -1,4 +1,6 @@
 ﻿using AulaWebAPI.Models;
+using AulaWebAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -15,13 +17,22 @@ namespace AulaWebAPI.Controllers
         public static User user = new User();
 
         private readonly IConfiguration _config;
-
-        public AuthController(IConfiguration config)
+        private readonly IUserService _userService;
+        public AuthController(IConfiguration config, IUserService userService)
         {
             _config = config;
+            _userService = userService;
         }
 
-        [HttpPost]
+        [HttpGet, Authorize]
+        public ActionResult<string> GetMe()
+        {
+            var userName = _userService.GetMyName();
+            return Ok(userName);
+        }
+
+
+        [HttpPost("Register")]
         public async Task<ActionResult<User>> Register(UserDTO request)
         {
             CreatePasswordHash(request.Password, out byte[] passworldHash, out byte[] passworldSalt);

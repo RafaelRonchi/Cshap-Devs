@@ -39,3 +39,6 @@ C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\System.Identi
 C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\IdentityModel.dll
 C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\IdentityServer4.Storage.dll
 C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\rafae\source\repos\AulaWebAPI\AulaWebAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
